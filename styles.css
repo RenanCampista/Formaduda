@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header/Hero Section */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease-out;
+}
+
+.subtitle {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    color: #f0f0f0;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
+.message {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #ffd700;
+    animation: fadeInUp 1s ease-out 0.4s backwards;
+}
+
+/* Videos Section */
+.videos-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.video-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.video-card:nth-child(1) { animation-delay: 0.1s; }
+.video-card:nth-child(2) { animation-delay: 0.2s; }
+.video-card:nth-child(3) { animation-delay: 0.3s; }
+.video-card:nth-child(4) { animation-delay: 0.4s; }
+
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    text-align: center;
+}
+
+.card-header h2 {
+    color: #fff;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    margin: 0;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 177.78%; /* 9:16 Aspect Ratio for Shorts */
+    height: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #fff;
+}
+
+.footer p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 5px;
+}
+
+.footer-date {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Confetti Effect */
+.confetti {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.confetti::before,
+.confetti::after {
+    content: '🎉';
+    position: absolute;
+    font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.confetti::before {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.confetti::after {
+    right: 10%;
+    animation-delay: 1.5s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .hero {
+        padding: 30px 15px;
+        margin-bottom: 30px;
+    }
+
+    .videos-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .video-card {
+        border-radius: 15px;
+    }
+
+    .card-header {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .hero {
+        padding: 20px 10px;
+    }
+
+    .videos-section {
+        gap: 15px;
+    }
+}
+
+/* Landscape mobile optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 20px 15px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
