@@ -1,5 +1,6 @@
 // Smooth scroll behavior
 document.addEventListener('DOMContentLoaded', function() {
+
     // Add intersection observer for scroll animations
     const observerOptions = {
         threshold: 0.1,
