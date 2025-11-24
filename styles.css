@@ -159,6 +159,48 @@ body {
     transform: rotate(5deg);
 }
 
+.mosaic-photo:nth-child(15) {
+    top: 30%;
+    left: 70%;
+    animation-delay: 7s;
+    transform: rotate(-9deg);
+}
+
+.mosaic-photo:nth-child(16) {
+    top: 60%;
+    left: 90%;
+    animation-delay: 7.5s;
+    transform: rotate(6deg);
+}
+
+.mosaic-photo:nth-child(17) {
+    top: 40%;
+    left: 15%;
+    animation-delay: 8s;
+    transform: rotate(-5deg);
+}
+
+.mosaic-photo:nth-child(18) {
+    top: 85%;
+    left: 35%;
+    animation-delay: 8.5s;
+    transform: rotate(7deg);
+}
+
+.mosaic-photo:nth-child(19) {
+    top: 12%;
+    left: 65%;
+    animation-delay: 9s;
+    transform: rotate(-8deg);
+}
+
+.mosaic-photo:nth-child(20) {
+    top: 55%;
+    left: 20%;
+    animation-delay: 9.5s;
+    transform: rotate(10deg);
+}
+
 .mosaic-photo:hover {
     opacity: 1;
     transform: scale(1.15) rotate(0deg);
