@@ -138,6 +138,27 @@ body {
     transform: rotate(-4deg);
 }
 
+.mosaic-photo:nth-child(12) {
+    top: 20%;
+    left: 50%;
+    animation-delay: 5.5s;
+    transform: rotate(8deg);
+}
+
+.mosaic-photo:nth-child(13) {
+    top: 50%;
+    left: 40%;
+    animation-delay: 6s;
+    transform: rotate(-7deg);
+}
+
+.mosaic-photo:nth-child(14) {
+    top: 75%;
+    left: 5%;
+    animation-delay: 6.5s;
+    transform: rotate(5deg);
+}
+
 .mosaic-photo:hover {
     opacity: 1;
     transform: scale(1.15) rotate(0deg);
